@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir Libro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Librería Online</h1>
+    <nav>
+      <a href="../biblioteca/central.html" class="nav-btn">Librería</a>
+      <a href="../mi biblioteca/personal.html" class="nav-btn">Mi Librería</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Subir un nuevo libro</h2>
+    <form id="addBookForm">
+      <div class="form-group">
+        <label for="bookTitle">Título del libro</label>
+        <input type="text" id="bookTitle" placeholder="Escribe el título" required>
+      </div>
+
+      <div class="form-group">
+        <label for="coverImage">Sube la imagen de portada</label>
+        <input type="file" id="coverImage" accept="image/*" required>
+      </div>
+
+      <div class="form-group">
+        <label for="audioFile">Sube el archivo de audio</label>
+        <input type="file" id="audioFile" accept="audio/*" required>
+      </div>
+
+      <button type="submit" class="btn">Subir libro</button>
+    </form>
+
+    <div id="preview" class="preview">
+      <h3>Vista previa</h3>
+      <img id="imagePreview" src="" alt="Portada del libro" style="display:none;">
+      <p id="titlePreview"></p>
+      <audio id="audioPreview" controls style="display:none;"></audio>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
